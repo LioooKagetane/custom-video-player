@@ -34,7 +34,7 @@ video {
     background-color: crimson;
     color: white;
 }
-.btn-screen {
+.btn-SCREEN {
     background-color: black;
     color: white;
 }
@@ -50,12 +50,12 @@ video {
 <body>
     <div class="container">
     <video width="720">
-        <source src="Your-Name-OST.mp4" type="video/mp4"/>
+        <source src="./assets/Your-Name-OST.mp4" type="video/mp4"/>
     </video>
     <div class="Video-Component">
         <button onclick="play()" class="btn btn-play">PLAY</button>
         <button onclick="pause()" class="btn btn-pause">PAUSE</button>
-        <button onclick="screen()" class="btn btn-screen">screen</button>
+        <button onclick="SCREEN()" class="btn btn-SCREEN">SCREEN</button>
     </div>
     </div>
 </body>
@@ -70,9 +70,9 @@ video {
         console.log('pause')
         VideoComponent.pause()
     }
-    function screen() {
-        console.log('screen')
-        VideoComponent.requestFullscreen)
+    function SCREEN() {
+        console.log('SCREEN')
+        VideoComponent.requestFullscreen()
     }
 </script>
 </html>
