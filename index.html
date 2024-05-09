@@ -34,7 +34,7 @@ video {
     background-color: crimson;
     color: white;
 }
-.btn-minimize {
+.btn-screen {
     background-color: black;
     color: white;
 }
@@ -55,7 +55,7 @@ video {
     <div class="Video-Component">
         <button onclick="play()" class="btn btn-play">PLAY</button>
         <button onclick="pause()" class="btn btn-pause">PAUSE</button>
-        <button onclick="minimize()" class="btn btn-minimize">MINIMIZE</button>
+        <button onclick="screen()" class="btn btn-screen">screen</button>
     </div>
     </div>
 </body>
@@ -70,9 +70,9 @@ video {
         console.log('pause')
         VideoComponent.pause()
     }
-    function minimize() {
-        console.log('minimize')
-        VideoComponent.requestPictureInPicture()
+    function screen() {
+        console.log('screen')
+        VideoComponent.requestFullscreen)
     }
 </script>
 </html>
