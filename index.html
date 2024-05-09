@@ -1,0 +1,78 @@
+<style>
+*, html, 
+   body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+video {
+    display: block;
+    width: 100%;
+}
+.Video-Component {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 12px;
+}
+
+.btn {
+    padding: 10;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 8px;
+}
+.btn-play {
+    background-color: crimson;
+    color: white;
+}
+.btn-minimize {
+    background-color: black;
+    color: white;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Video</title>
+</head>
+<body>
+    <div class="container">
+    <video width="720">
+        <source src="./assets/Your-Name-OST.mp4" type="video/mp4"/>
+    </video>
+    <div class="Video-Component">
+        <button onclick="play()" class="btn btn-play">PLAY</button>
+        <button onclick="pause()" class="btn btn-pause">PAUSE</button>
+        <button onclick="minimize()" class="btn btn-minimize">MINIMIZE</button>
+    </div>
+    </div>
+</body>
+
+<script>
+    const VideoComponent = document.querySelector('video')
+    function play() {
+        console.log('playing')
+        VideoComponent.play()
+    }
+    function pause() {
+        console.log('pause')
+        VideoComponent.pause()
+    }
+    function minimize() {
+        console.log('minimize')
+        VideoComponent.requestPictureInPicture()
+    }
+</script>
+</html>
